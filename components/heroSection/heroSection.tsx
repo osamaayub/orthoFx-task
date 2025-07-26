@@ -61,11 +61,11 @@ export function HeroSection() {
               className={`space-y-4 max-w-sm text-center md:text-right transition-all duration-700 ease-out delay-200 ${isContentVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-[20px]"}`}
             >
               <p className="text-white text-sm leading-relaxed font-medium">
-                With AirFlex™ aligners, enjoy up to 50% less wear time <br />
-                compared to other brands. OrthoFX &apos cutting-edge <br />
-                aligners are designed to fit your unique lifestyle and <br />
-                treatment goals.*
-              </p>
+              With AirFlex™ aligners, enjoy up to 50% less wear time <br />
+              compared to other brands. OrthoFX &apos cutting-edge <br />
+              aligners are designed to fit your unique lifestyle and <br />
+              treatment goals.*
+            </p>
               <Button className="bg-white text-gray-900 border border-gray-300 hover:bg-gray-50 hover:border-gray-400 rounded-full px-8 py-4 flex items-center space-x-3 font-medium transition-all duration-200 mx-auto md:ml-auto md:mr-0">
                 <span>Find a doctor</span>
                 <ArrowRight className="w-4 h-4 text-gray-900" />
