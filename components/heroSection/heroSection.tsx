@@ -41,7 +41,7 @@ export function HeroSection() {
           <div className="space-y-4 z-10 max-w-sm text-center lg:absolute lg:bottom-0 lg:right-0 lg:text-right lg:max-w-none">
             <p className="text-white text-sm leading-relaxed font-medium">
               With AirFlex™ aligners, enjoy up to 50% less wear time <br />
-              compared to other brands. OrthoFX's cutting-edge <br />
+              compared to other brands. OrthoFX &apos cutting-edge <br />
               aligners are designed to fit your unique lifestyle and <br />
               treatment goals.*
             </p>
