@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+📌 Project Title
+Orthofx Header & Hero Section Clone
 
-## Getting Started
+📄 Introduction
+This project is a responsive clone of the header and hero section from the Orthofx website. It is built using Next.js for server-side rendering and routing, Tailwind CSS for styling and responsiveness, and shadcn/ui for accessible, reusable UI components.
 
-First, run the development server:
+📚 Table of Contents
+Introduction
 
-```bash
+Features
+
+Installation
+
+Usage
+
+Dependencies
+
+Configuration
+
+Examples
+
+Troubleshooting
+
+Contributors
+
+License
+
+✨ Features
+⚡ Built with Next.js 14
+
+🎨 Styled using Tailwind CSS
+
+🧩 Uses shadcn/ui component library
+
+✅ Fully responsive across devices
+
+🔒 Clean, maintainable code structure
+
+⚙️ Installation
+Clone the repository:
+
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/orthofx-header-hero-clone.git
+cd orthofx-header-hero-clone
+Install dependencies:
+
+bash
+Copy
+Edit
+npm install
+# or
+yarn install
+Run the development server:
+
+bash
+Copy
+Edit
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🚀 Usage
+Modify the Header and HeroSection components inside the components/ directory as needed.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Tailwind CSS classes ensure full responsiveness — adjust breakpoints and utility classes as required.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+shadcn/ui components can be customized via props and Tailwind overrides.
 
-## Learn More
+📦 Dependencies
+Next.js — React framework for SSR
 
-To learn more about Next.js, take a look at the following resources:
+Tailwind CSS — Utility-first CSS framework
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+shadcn/ui — Accessible UI components
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+TypeScript (optional but recommended)
 
-## Deploy on Vercel
+🛠️ Configuration
+Tailwind config: tailwind.config.js
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+shadcn/ui config: check components/ for imports and usage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Custom assets: Place images in the public/ directory.
