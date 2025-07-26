@@ -20,7 +20,7 @@ export function HeroSection() {
     <section className="relative min-h-screen flex items-center bg-white pt-24">
       <div className="absolute inset-0">
         <Image
-          src="/Background.jpeg"
+          src="/hero-background.jpeg"
           alt="Happy couple smiling confidently"
           fill
           className="object-cover object-center"
