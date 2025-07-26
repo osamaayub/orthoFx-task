@@ -3,16 +3,15 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
-import { useState, useEffect } from "react" // Import useEffect
+import { useState, useEffect } from "react"
 
 export function HeroSection() {
-  const [isContentVisible, setIsContentVisible] = useState(false) // State for animation
+  const [isContentVisible, setIsContentVisible] = useState(false)
 
   useEffect(() => {
-    // Trigger animation after a short delay to allow header to animate first
     const timer = setTimeout(() => {
       setIsContentVisible(true)
-    }, 300) // Adjust delay as needed
+    }, 300)
 
     return () => clearTimeout(timer)
   }, [])
@@ -46,15 +45,16 @@ export function HeroSection() {
         </div>
 
         {/* Right Content Column */}
+        {/* Always relative for absolute children positioning on desktop */}
         {/* On mobile/tablet: flex column, items centered, padding bottom */}
-        {/* On desktop: relative, flex-end items, no bottom padding, fixed height for absolute positioning */}
-        <div
-          className={`lg:col-span-5 lg:col-start-8 flex flex-col items-center justify-center pb-10 lg:pb-0 lg:relative lg:items-end lg:justify-end lg:h-[300px] transition-all duration-700 ease-out delay-200 ${isContentVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-[20px]"}`}
-        >
+        {/* On desktop: flex-end items, no bottom padding */}
+        <div className="lg:col-span-5 lg:col-start-8 relative flex flex-col items-center justify-center pb-10 lg:pb-0 lg:items-end lg:justify-end">
           {/* Main text and button block */}
-          {/* On mobile/tablet: centered text, button centered with mx-auto */}
+          {/* On mobile/tablet: centered text, button centered with mx-auto, static position */}
           {/* On desktop: absolute positioned, right-aligned text */}
-          <div className="space-y-4 z-10 max-w-sm text-center lg:absolute lg:bottom-0 lg:right-0 lg:text-right lg:max-w-none">
+          <div
+            className={`space-y-4 z-10 max-w-sm text-center lg:absolute lg:bottom-0 lg:right-0 lg:text-right lg:max-w-none transition-all duration-700 ease-out delay-200 ${isContentVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-[20px]"}`}
+          >
             <p className="text-white text-sm leading-relaxed font-medium">
               With AirFlex™ aligners, enjoy up to 50% less wear time <br />
               compared to other brands. OrthoFX &apos cutting-edge <br />
