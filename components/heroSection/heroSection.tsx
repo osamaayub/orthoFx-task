@@ -60,7 +60,7 @@ export function HeroSection() {
             <div
               className={`space-y-4 max-w-sm text-center md:text-right transition-all duration-700 ease-out delay-200 ${isContentVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-[20px]"}`}
             >
-              <p className="text-white text-sm leading-relaxed font-medium">
+              <p className="text-white text-sm leading-relaxed font-medium text-nowrap">
               With AirFlex™ aligners, enjoy up to 50% less wear time <br />
               compared to other brands. OrthoFX &apos cutting-edge <br />
               aligners are designed to fit your unique lifestyle and <br />
