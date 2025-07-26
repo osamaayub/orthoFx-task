@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react" // Import useEffect
 import { Button } from "@/components/ui/button"
 import { ChevronDown, Menu, X, User } from "lucide-react"
 
@@ -11,6 +11,11 @@ interface HeaderProps {
 
 export function Navbar({ handleSmoothScroll }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMounted, setIsMounted] = useState(false) // State for animation
+
+  useEffect(() => {
+    setIsMounted(true) // Trigger animation on mount
+  }, [])
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
@@ -18,7 +23,9 @@ export function Navbar({ handleSmoothScroll }: HeaderProps) {
 
   return (
     <>
-      <header className="flex items-center justify-between px-6 md:px-8 py-4 md:py-6 bg-white/95 backdrop-blur-md fixed w-full top-0 z-50 border-b border-gray-100">
+      <header
+        className={`flex items-center justify-between px-6 md:px-8 py-4 md:py-6 bg-white/95 backdrop-blur-md fixed w-full top-0 z-50 border-b border-gray-100 transition-all duration-700 ease-out ${isMounted ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full"}`}
+      >
         <div className="text-2xl md:text-3xl font-bold tracking-tight">
           <span className="text-gray-900">Ortho</span>
           <span className="text-orange-500 italic">FX</span>
