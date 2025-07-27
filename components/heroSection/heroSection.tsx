@@ -1,13 +1,25 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export function HeroSection() {
+  const [isContentVisible, setIsContentVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsContentVisible(true);
+    }, 300);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <section className="relative min-h-screen flex items-center  bg-white pt-24">
-      <div className="absolute inset-0 ">
+    <section className="relative min-h-screen flex items-center bg-white pt-24">
+      {/* Background Image */}
+      <div className="absolute inset-0">
         <Image
           src="/hero-background.jpeg"
           alt="Happy couple smiling confidently"
@@ -20,7 +32,13 @@ export function HeroSection() {
 
       <div className="relative z-10 container mx-auto px-6 md:px-8 grid lg:grid-cols-12 gap-16 items-center min-h-[80vh]">
         {/* Left Content */}
-        <div className="lg:col-span-6 space-y-8 pt-10 lg:pt-0 flex flex-col items-center lg:items-start">
+        <div
+          className={`lg:col-span-6 space-y-8 pt-10 lg:pt-0 flex flex-col items-center lg:items-start transition-all duration-700 ease-out ${
+            isContentVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-[20px]"
+          }`}
+        >
           <div className="space-y-4 text-center lg:text-left">
             <h1 className="text-7xl lg:text-8xl font-extralight text-gray-900 leading-[0.9] tracking-tight drop-shadow-lg">
               Be you.
@@ -31,17 +49,12 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Right Content Column */}
-        {/* On mobile/tablet: flex column, items centered, padding bottom */}
-        {/* On desktop: relative, flex-end items, no bottom padding, fixed height for absolute positioning */}
+        {/* Right Content */}
         <div className="lg:col-span-5 lg:col-start-8 flex flex-col items-center justify-center pb-10 lg:pb-0 lg:relative lg:items-end lg:justify-end lg:h-[300px]">
-          {/* Main text and button block */}
-          {/* On mobile/tablet: centered text, button centered with mx-auto */}
-          {/* On desktop: absolute positioned, right-aligned text */}
           <div className="space-y-4 z-10 max-w-sm text-center lg:absolute lg:bottom-0 lg:right-0 lg:text-right lg:max-w-none">
-            <p className="text-white text-sm leading-relaxed font-medium text-nowrap">
+            <p className="text-white text-sm leading-relaxed font-medium">
               With AirFlex™ aligners, enjoy up to 50% less wear time <br />
-              compared to other brands. OrthoFX &apos cutting-edge <br />
+              compared to other brands. OrthoFX&apos;s cutting-edge <br />
               aligners are designed to fit your unique lifestyle and <br />
               treatment goals.*
             </p>
@@ -49,9 +62,9 @@ export function HeroSection() {
               <span>Find a doctor</span>
               <ArrowRight className="w-4 h-4 text-gray-900" />
             </Button>
-            
           </div>
-            {/* Aligner image block (Percentless.png) - hidden on small screens, absolutely positioned on large screens */}
+
+          {/* Extra Image */}
           <div className="hidden lg:block absolute bottom-[-50px] left-[-100px] z-0 bg-white/15 backdrop-blur-md border-white/20 rounded-xl p-4">
             <Image
               src="/Percentless.png"
@@ -64,5 +77,7 @@ export function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
+
+
