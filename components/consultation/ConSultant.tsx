@@ -8,12 +8,12 @@ const ConSultant = () => {
     <section className="bg-black max-w-7xl mx-auto h-[100vh] flex items-center overflow-hidden">
       
       {/* Background Image Layer */}
-      <div className="absolute  w-full h-full" >
+      <div className="absolute inset-0" >
         <Image
           src="/doctor.png"
           alt="Doctor background"
           fill
-          className="bg-cover rounded-2xl"
+          className="object-cover rounded-2xl"
           priority
         />
       </div>
