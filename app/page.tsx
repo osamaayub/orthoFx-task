@@ -5,6 +5,7 @@ import { Navbar } from "@/components/navbar/navbar";
 import { HeroSection } from "@/components/heroSection/heroSection"
 import {TrustedSection} from "@/components/paitentSection/patient";
 import LifestyleSection from "@/components/lifeStyle/lifeStyle";
+import ConSultant from "@/components/consultation/ConSultant";
 
 export default function OrthoFXHomepage() {
   // This function is passed to the Header component for smooth scrolling
@@ -26,6 +27,7 @@ export default function OrthoFXHomepage() {
       <HeroSection />
       <TrustedSection/>
       <LifestyleSection/>
+      <ConSultant/>
     </div>
   )
 }
