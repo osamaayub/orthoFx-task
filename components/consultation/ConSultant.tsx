@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 const ConSultant = () => {
   return (
-    <section className="bg-black max-w-7xl mx-auto h-[100vh] flex items-center overflow-hidden">
+    <section className=" max-w-7xl mx-auto h-[100vh] flex items-center overflow-hidden">
       
       {/* Background Image Layer */}
       <div className="absolute inset-0" >
