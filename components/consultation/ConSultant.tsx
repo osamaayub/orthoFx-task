@@ -8,7 +8,7 @@ const ConSultant = () => {
     <section className="relative min-h-screen flex items-center overflow-hidden">
       
       {/* Background Image Layer */}
-      <div className="absolute inset-0 w-full h-full">
+      <div className="absolute  w-full h-full">
         <Image
           src="/Doctor.png"
           alt="Doctor background"
