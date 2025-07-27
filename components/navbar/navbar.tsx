@@ -18,7 +18,7 @@ export function Navbar({ handleSmoothScroll }: HeaderProps) {
 
   return (
     <>
-      <header className="flex items-center justify-between px-6 md:px-8 py-4 md:py-6 bg-white/95 backdrop-blur-md fixed w-full top-0 z-50 border-b border-gray-100">
+      <header className="flex items-center justify-between px-6 md:px-8 py-4 md:py-6  fixed w-full top-0 z-50 ">
         <div className="text-2xl md:text-3xl font-bold tracking-tight">
           <span className="text-gray-900">Ortho</span>
           <span className="text-orange-500 italic">FX</span>
@@ -33,28 +33,28 @@ export function Navbar({ handleSmoothScroll }: HeaderProps) {
             OrthoFX Difference
           </a>
           <div className="flex items-center space-x-1 cursor-pointer group">
-            <span className="text-gray-700 group-hover:text-orange-500 transition-colors text-sm font-medium whitespace-nowrap">
+            <span className="text-gray-700 group-hover:hover:bg-[#d9edf7]  transition-colors text-sm font-medium whitespace-nowrap">
               Products
             </span>
-            <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-orange-500" />
+            <ChevronDown className="w-4 h-4 text-gray-500 group-hover:hover:bg-[#d9edf7] " />
           </div>
           <div className="flex items-center space-x-1 cursor-pointer group">
-            <span className="text-gray-700 group-hover:text-orange-500 transition-colors text-sm font-medium whitespace-nowrap">
+            <span className="text-gray-700 group-hover:hover:bg-[#d9edf7] transition-colors text-sm font-medium whitespace-nowrap">
               Services
             </span>
-            <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-orange-500" />
+            <ChevronDown className="w-4 h-4 text-gray-500 group-hover:hover:bg-[#d9edf7] " />
           </div>
           <a
             href="#results"
             onClick={(e) => handleSmoothScroll(e, "results")}
-            className="text-gray-700 hover:text-orange-500 transition-colors text-sm font-medium whitespace-nowrap"
+            className="text-gray-700 hover:group-hover:hover:bg-[#d9edf7]  transition-colors text-sm font-medium whitespace-nowrap"
           >
             Smile Results
           </a>
           <a
             href="#quiz"
             onClick={(e) => handleSmoothScroll(e, "quiz")}
-            className="text-gray-700 hover:text-orange-500 transition-colors text-sm font-medium whitespace-nowrap"
+            className="text-gray-700 hover:group-hover:hover:bg-[#d9edf7]  transition-colors text-sm font-medium whitespace-nowrap"
           >
             Smile Quiz
           </a>

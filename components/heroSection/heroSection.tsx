@@ -6,13 +6,13 @@ import { ArrowRight } from "lucide-react"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center bg-white pt-24">
-      <div className="absolute inset-0">
+    <section className="relative min-h-screen flex items-center  bg-white pt-24">
+      <div className="absolute inset-0 ">
         <Image
           src="/hero-background.jpeg"
           alt="Happy couple smiling confidently"
           fill
-          className="object-cover object-center"
+          className="object-cover object-center mx-auto rounded-bl-2xl"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent" />
@@ -39,9 +39,9 @@ export function HeroSection() {
           {/* On mobile/tablet: centered text, button centered with mx-auto */}
           {/* On desktop: absolute positioned, right-aligned text */}
           <div className="space-y-4 z-10 max-w-sm text-center lg:absolute lg:bottom-0 lg:right-0 lg:text-right lg:max-w-none">
-            <p className="text-white text-sm leading-relaxed font-medium">
+            <p className="text-white text-sm leading-relaxed font-medium text-nowrap">
               With AirFlex™ aligners, enjoy up to 50% less wear time <br />
-              compared to other brands. OrthoFX's cutting-edge <br />
+              compared to other brands. OrthoFX &apos cutting-edge <br />
               aligners are designed to fit your unique lifestyle and <br />
               treatment goals.*
             </p>
@@ -49,9 +49,9 @@ export function HeroSection() {
               <span>Find a doctor</span>
               <ArrowRight className="w-4 h-4 text-gray-900" />
             </Button>
+            
           </div>
-
-          {/* Aligner image block (Percentless.png) - hidden on small screens, absolutely positioned on large screens */}
+            {/* Aligner image block (Percentless.png) - hidden on small screens, absolutely positioned on large screens */}
           <div className="hidden lg:block absolute bottom-[-50px] left-[-100px] z-0 bg-white/15 backdrop-blur-md border-white/20 rounded-xl p-4">
             <Image
               src="/Percentless.png"
