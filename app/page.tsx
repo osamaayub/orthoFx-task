@@ -4,6 +4,7 @@ import type React from "react"
 import { Navbar } from "@/components/navbar/navbar";
 import { HeroSection } from "@/components/heroSection/heroSection"
 import {TrustedSection} from "@/components/paitentSection/patient";
+import LifestyleSection from "@/components/lifeStyle/lifeStyle";
 
 export default function OrthoFXHomepage() {
   // This function is passed to the Header component for smooth scrolling
@@ -24,6 +25,7 @@ export default function OrthoFXHomepage() {
       <Navbar handleSmoothScroll={handleSmoothScroll} />
       <HeroSection />
       <TrustedSection/>
+      <LifestyleSection/>
     </div>
   )
 }

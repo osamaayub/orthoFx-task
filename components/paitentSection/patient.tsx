@@ -53,7 +53,7 @@ export function TrustedSection() {
   <div className="max-w-6xl mx-auto text-left">
     
     {/* Heading */}
-    <h2 className="font-baskerville text-6xl md:text-8xl leading-tight mb-8">
+    <h2 className="font-Baskerville text-6xl md:text-8xl leading-tight mb-8">
       Why are we <span className=" font-baskerville text-blue-100">different?</span>
     </h2>
 
