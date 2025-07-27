@@ -35,3 +35,7 @@ export const steps=[
               desc: "Continue with retainers and check-ins to keep your smile flawless.",
             },
           ]
+
+  export const DoctorImage={
+    ImgUrl:"./Doctor.png"
+  }

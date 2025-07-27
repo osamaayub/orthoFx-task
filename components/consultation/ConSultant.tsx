@@ -5,12 +5,12 @@ import { ArrowRight } from "lucide-react";
 
 const ConSultant = () => {
   return (
-    <section className=" max-w-7xl mx-auto h-[100vh] flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden">
       
       {/* Background Image Layer */}
-      <div className="absolute inset-0" >
+      <div className="absolute inset-0 w-full h-full">
         <Image
-          src="/doctor.png"
+          src="/Doctor.png"
           alt="Doctor background"
           fill
           className="object-cover rounded-2xl"
@@ -19,10 +19,10 @@ const ConSultant = () => {
       </div>
 
       {/* Foreground Content */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full relative z-10">
-        
-        {/* Heading + CTA */}
-        <div className="flex flex-col justify-center px-4 md:px-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full relative z-10 px-4 md:px-6">
+
+        {/* Left Side: Heading + CTA */}
+        <div className="flex flex-col justify-center">
           {/* Section Label */}
           <div className="flex items-center gap-2 mb-4">
             <div className="border-t border-white w-16"></div>
@@ -45,25 +45,26 @@ const ConSultant = () => {
           </div>
         </div>
 
-        {/* Responsive Step Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 rounded-xl px-4 md:px-6">
+        {/* Right Side: Step Cards */}
+        <div className="flex flex-col items-center lg:items-start gap-8 pt-14">
           {steps.map(({ step, title, desc }) => (
             <div
               key={step}
-              className="bg-blue-100 border border-gray-300 rounded-2xl p-6 shadow-md hover:shadow-lg transition duration-300 min-h-[180px] w-full max-w-[280px] flex flex-col justify-between"
+              className="bg-white/80 border border-gray-200 rounded-3xl p-6 shadow-lg transition duration-300 min-h-[200px] w-full max-w-[300px] flex flex-col justify-between backdrop-blur-sm"
             >
-              <div className="text-black text-lg font-Baserville mb-1">
+              <div className="text-blue-900 text-lg font-semibold font-Baserville mb-1">
                 Step {step}
               </div>
-              <h3 className="text-gray-900 font-Baserville text-[20px] leading-tight font-bold mb-3">
+              <h3 className="text-blue-950 font-bold font-Baserville text-[22px] leading-tight mb-2">
                 {title}
               </h3>
-              <p className="text-gray-600 font-Baserville text-base leading-relaxed">
+              <p className="text-gray-700 text-base leading-relaxed font-Baserville">
                 {desc}
               </p>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
