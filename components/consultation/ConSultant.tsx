@@ -10,7 +10,7 @@ const ConSultant = () => {
       {/* Background Image Layer */}
       <div className="absolute  w-full h-full">
         <Image
-          src="/Doctor.png"
+          src="/doctor.png"
           alt="Doctor background"
           fill
           className="object-cover rounded-2xl"
